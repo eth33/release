@@ -29,4 +29,4 @@ ENV PATH="/codeql-home/codeql:${PATH}"
 WORKDIR .
 COPY server /opt/
 COPY build /usr/share/nginx/html
-CMD ["/opt/server"]
+# CMD ["/opt/server"]

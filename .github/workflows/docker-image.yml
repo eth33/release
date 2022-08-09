@@ -17,4 +17,4 @@ jobs:
     - name: Docker Login
       run: docker login -u y3qx -p dckr_pat_4tVwcm3v6-i0yk3EqikyDsSrKyk
     - name: Publish Image
-      run: docker push docker push y3qx/codeql-made-easy:$(date +%s)
+      run: docker image push y3qx/codeql-made-easy:$(date +%s)

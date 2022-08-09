@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ql-made-easy:latest
+      run: docker build . --file Dockerfile --tag y3qx/codeql-made-easy
     - name: Docker Login
       run: docker login -u y3qx -p dckr_pat_4tVwcm3v6-i0yk3EqikyDsSrKyk
     - name: Publish Image

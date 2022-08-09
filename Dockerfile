@@ -1,5 +1,4 @@
 FROM nginx
-COPY nginx.conf /etc/nginx/nginx.conf
 LABEL maintainer=jxy133@student.bham.ac.uk
 EXPOSE 80
 
@@ -29,4 +28,5 @@ ENV PATH="/codeql-home/codeql:${PATH}"
 WORKDIR .
 COPY server /opt/
 COPY build /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/nginx.conf
 # CMD ["/opt/server"]

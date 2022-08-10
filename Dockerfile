@@ -25,8 +25,7 @@ RUN mkdir /codeql-home && \
     mv /tmp/codeql /codeql-home && \
     rm -rf /tmp/codeql-linux64.zip /tmp/codeql.zip
 ENV PATH="/codeql-home/codeql:${PATH}"
-WORKDIR .
 COPY server /opt/
 COPY build/ /usr/share/nginx/html/
-# COPY nginx.conf /etc/nginx/nginx.conf
+COPY nginx.conf /etc/nginx/nginx.conf
 # CMD ["/opt/server"]

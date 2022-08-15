@@ -28,3 +28,4 @@ ENV PATH="/codeql-home/codeql:${PATH}"
 COPY server /bin/
 COPY build/ /usr/share/nginx/html/
 COPY nginx.conf /etc/nginx/nginx.conf
+CMD ["server"]

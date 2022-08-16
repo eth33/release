@@ -1,6 +1,6 @@
 FROM nginx
 LABEL maintainer=jxy133@student.bham.ac.uk
-EXPOSE 80
+EXPOSE 80 443 8080
 
 RUN apt update && \
     apt install -y curl unzip

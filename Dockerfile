@@ -1,9 +1,10 @@
-FROM nginx
+FROM debian:bullseye-slim
 LABEL maintainer=jxy133@student.bham.ac.uk
 EXPOSE 80 443 8080
 
 RUN apt update && \
     apt install -y curl unzip
+RUN apt install nginx
 ARG GCC_VERSION=10
 RUN apt install -y g++-$GCC_VERSION build-essential
 ARG JDK_VERSION=17
@@ -28,3 +29,4 @@ ENV PATH="/codeql-home/codeql:${PATH}"
 COPY server /bin/
 COPY build/ /usr/share/nginx/html/
 COPY nginx.conf /etc/nginx/nginx.con
+CMD ["server"]
